@@ -5,9 +5,22 @@
  */
 let alphabet = "ABCDEFGHIJKLMNOPQRSTUVWXYZ"
 
-
+for (index, letter) in alphabet.enumerated() {
+    if index.isMultiple(of: 2) == false {
+        continue
+    }
+    print("\(index): \(letter)")
+}
 //:  Create a `[String: String]` dictionary where the keys are names of states and the values are their capitals. Include at least three key/value pairs in your collection, with one of them being your home state. Now loop through this dictionary again, printing out the keys and values in a sentence, but add an if statement that will check if the current iteration is your home state. If it is, print("I found my home!") and break out of the loop.
+var capitalInState: [String: String] = ["North Carolina": "Raleigh", "Georgia": "Atlanta", "Virgina": "Richmond"]
 
+for (state, capital) in capitalInState {
+    if state == "North Carolina" {
+        print("I found my home! \(state)")
+        break
+    }
+    print("The capital of \(state) is \(capital)")
+}
 
 /*:
 [Previous](@previous)  |  page 5 of 6  |  [Next: App Exercise - Finding Movements](@next)
